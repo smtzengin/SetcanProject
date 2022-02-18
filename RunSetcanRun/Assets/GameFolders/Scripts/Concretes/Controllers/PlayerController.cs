@@ -19,6 +19,7 @@ namespace RunSetcanRun.Controllers
         Mover _mover;
         Flip _flip;
         Jump _jump;
+        OnGround _onGround;
 
         public void Awake()
         {
@@ -26,7 +27,9 @@ namespace RunSetcanRun.Controllers
             _mover = GetComponent<Mover>();
             _flip = GetComponent<Flip>();
             _jump = GetComponent<Jump>();
+            _onGround = GetComponent<OnGround>();
             _input = new PcInput();
+            
 
         }
 
@@ -34,14 +37,14 @@ namespace RunSetcanRun.Controllers
         {
             _horizontal = _input.Horizontal;
             _vertical = _input.Vertical;
-            if (_input.isJumpButtonDown)
+            if (_input.isJumpButtonDown && _onGround.IsOnGround)
             {
                 _jump.JumpAction();
                 _isJump = true;
             }
 
             _characterAnimation.MoveAnimation(_horizontal);
-            _characterAnimation.JumpAnimation(_jump.IsJump);
+            _characterAnimation.JumpAnimation(!_onGround.IsOnGround && _jump.IsJump);
         }
 
         public void FixedUpdate()
