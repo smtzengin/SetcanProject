@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6829118251264910031}
   - component: {fileID: 6829118251264910017}
   - component: {fileID: 6829118251264910016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sol ayak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118251293729263}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118251380059146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sol_ayak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118251478437061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "y\xFCz_\xFCst"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118251560866888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "y\xFCz_alt"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 6829118251769732512}
   - component: {fileID: 6829118251769732514}
   - component: {fileID: 6829118251769732513}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sag ayak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118251789109831}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "sa\u011F_kol"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 6829118251828984674}
   - component: {fileID: 6829118251828984676}
   - component: {fileID: 6829118251828984675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "y\xFCz"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118251995414336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "sol_sa\xE7"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118252037614069}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sol_kol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 6829118252205560358}
   - component: {fileID: 6829118252205560357}
   - component: {fileID: 6829118252205560345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ MonoBehaviour:
   checkRadius: 0.3
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 256
   jumpTime: 0.5
   fallMultiplier: 3
   lowJumpMultiplier: 3.25
@@ -792,7 +792,7 @@ MonoBehaviour:
   maxDistance: 0.15
   layerMask:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 256
   translates:
   - {fileID: 6829118251293729263}
   - {fileID: 6829118252232136739}
@@ -806,7 +806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118252232136739}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 6829118252242505118}
   - component: {fileID: 6829118252242505104}
   - component: {fileID: 6829118252242505119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sol el
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +939,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118252253602834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Root_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118252420949121}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "g\xF6vde_\xFCst"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 6829118252502511700}
   - component: {fileID: 6829118252502511702}
   - component: {fileID: 6829118252502511701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "sa\u011F sa\xE7"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1110,7 @@ GameObject:
   - component: {fileID: 6829118252713068689}
   - component: {fileID: 6829118252713068691}
   - component: {fileID: 6829118252713068690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "sa\u011F el"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118252787974406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1243,7 @@ GameObject:
   - component: {fileID: 6829118252801097042}
   - component: {fileID: 6829118252801097044}
   - component: {fileID: 6829118252801097043}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "g\xF6vde"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118252993638844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "sa\u011F ayak"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1376,7 +1376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118253035752405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Foots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829118253065329758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "sa\u011F_sa\xE7"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 6829118253143185383}
   - component: {fileID: 6829118253143185369}
   - component: {fileID: 6829118253143185368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "sol sa\xE7"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
