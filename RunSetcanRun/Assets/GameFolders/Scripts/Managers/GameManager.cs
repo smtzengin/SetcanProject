@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float delayLevelTime = 1f;
+    [SerializeField] int score;
 
     public static GameManager Instance { get; private set; }
     public int buildIndex;
+
+    
+    public event System.Action<int> OnScoreChanged;
 
     private void Awake()
     {
@@ -68,4 +72,9 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void IncreaseScore(int score = 0)
+    {
+        this.score += score;
+        OnScoreChanged?.Invoke(this.score);
+    }
 }

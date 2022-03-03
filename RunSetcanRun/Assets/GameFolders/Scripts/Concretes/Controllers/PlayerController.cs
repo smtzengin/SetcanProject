@@ -1,5 +1,6 @@
 using RunSetcanRun.Abstracts.Inputs;
 using RunSetcanRun.Animations;
+using RunSetcanRun.Combats;
 using RunSetcanRun.Inputs;
 using RunSetcanRun.Movements;
 using System.Collections;
@@ -20,6 +21,8 @@ namespace RunSetcanRun.Controllers
         Flip _flip;
         Jump _jump;
         OnGround _onGround;
+        Health _health;
+        Damage _damage;
 
         public void Awake()
         {
@@ -28,10 +31,13 @@ namespace RunSetcanRun.Controllers
             _flip = GetComponent<Flip>();
             _jump = GetComponent<Jump>();
             _onGround = GetComponent<OnGround>();
+            _health = GetComponent<Health>();
+            _damage = GetComponent<Damage>();
             _input = new PcInput();
-            
-
+ 
         }
+
+
 
         public void Update()
         {
