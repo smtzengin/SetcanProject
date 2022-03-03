@@ -45,6 +45,8 @@ namespace RunSetcanRun.Controllers
 
             _characterAnimation.MoveAnimation(_horizontal);
             _characterAnimation.JumpAnimation(!_onGround.IsOnGround && _jump.IsJump);
+
+
         }
 
         public void FixedUpdate()
@@ -58,5 +60,16 @@ namespace RunSetcanRun.Controllers
                 _isJump = false;
             }
         }
+
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "tag_final_collider")
+            {
+                GameManager.Instance.LoadScene(1);
+            }
+        }
+
+
     }
 }

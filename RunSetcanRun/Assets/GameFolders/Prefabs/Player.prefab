@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 6829118252205560352}
   - component: {fileID: 6829118252205560367}
   - component: {fileID: 6829118252205560353}
+  - component: {fileID: 428016602388759114}
   - component: {fileID: 6829118252205560354}
   - component: {fileID: 6829118252205560356}
   - component: {fileID: 6829118252205560355}
@@ -605,6 +606,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9acb38ed3dd9c8f4191906aa87315fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &428016602388759114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829118252205560366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9ba803449e54b499131bf31308d3fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  jumpForce: 12
+  feetPos: {fileID: 6829118252232136739}
+  checkRadius: 0.3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 384
+  jumpTime: 0.5
+  fallMultiplier: 3
+  lowJumpMultiplier: 3.25
 --- !u!212 &6829118252205560354
 SpriteRenderer:
   m_ObjectHideFlags: 0
