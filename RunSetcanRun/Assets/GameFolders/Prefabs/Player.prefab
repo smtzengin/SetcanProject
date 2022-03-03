@@ -792,7 +792,7 @@ MonoBehaviour:
   maxDistance: 0.15
   layerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   translates:
   - {fileID: 6829118251293729263}
   - {fileID: 6829118252232136739}
