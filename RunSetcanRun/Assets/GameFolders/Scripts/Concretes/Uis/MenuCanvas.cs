@@ -8,6 +8,11 @@ namespace RunSetcanRun.Uis
     {
         [SerializeField] MenuPanel menuPanel;
 
+        private void Start()
+        {
+            this.gameObject.GetComponent<Canvas>().overrideSorting = true;
+        }
+
         private void OnEnable()
         {
             GameManager.Instance.OnSceneChanged += HandleSceneChanged;

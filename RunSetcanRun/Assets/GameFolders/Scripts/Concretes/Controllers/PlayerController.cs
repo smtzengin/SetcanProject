@@ -23,7 +23,6 @@ namespace RunSetcanRun.Controllers
         Jump _jump;
         OnGround _onGround;
         Health _health;
-        Damage _damage;
         DisplayScore _displayScore;
 
         public void Awake()
@@ -34,8 +33,7 @@ namespace RunSetcanRun.Controllers
             _jump = GetComponent<Jump>();
             _onGround = GetComponent<OnGround>();
             _health = GetComponent<Health>();
-            _damage = GetComponent<Damage>();
-            _displayScore = GetComponent<DisplayScore>();
+            _displayScore = FindObjectOfType<DisplayScore>();
             _input = new PcInput();
  
         }

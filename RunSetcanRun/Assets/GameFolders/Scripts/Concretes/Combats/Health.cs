@@ -1,3 +1,4 @@
+using RunSetcanRun.Uis;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,9 +15,14 @@ namespace RunSetcanRun.Combats
         public event System.Action<int,int> OnHealthChanged;
         public event System.Action OnDead;
 
+        DisplayScore _displayScore;
+
+
         private void Awake()
         {
             currentHealth = maxHealth;
+            _displayScore = FindObjectOfType<DisplayScore>();
+
         }
         private void Start()
         {
@@ -31,6 +37,8 @@ namespace RunSetcanRun.Combats
             if (IsDead)
             {
                 OnDead?.Invoke();
+                GameManager.Instance.score = 0;
+                _displayScore.HandleScoreChanged(0);
             }
             else
             {
