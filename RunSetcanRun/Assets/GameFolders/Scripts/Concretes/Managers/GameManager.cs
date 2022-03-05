@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float delayLevelTime = 1f;
-    [SerializeField] int score;
+    [SerializeField] public int score;
 
     public static GameManager Instance { get; private set; }
     public int buildIndex;
 
-    
+    public event System.Action<bool> OnSceneChanged;
     public event System.Action<int> OnScoreChanged;
 
     private void Awake()
@@ -46,12 +46,14 @@ public class GameManager : MonoBehaviour
 
         yield return SceneManager.UnloadSceneAsync(buildIndex);
 
-        SceneManager.LoadSceneAsync(buildIndex + levelIndex).completed += (AsyncOperation obj) =>
+        SceneManager.LoadSceneAsync(buildIndex + levelIndex, LoadSceneMode.Additive).completed += (AsyncOperation obj) =>
         {
             SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(buildIndex + levelIndex));
         };
 
+        OnSceneChanged?.Invoke(false);
     }
+
 
     public void LoadMenuAndUi(float delayLoadingTime)
     {
@@ -62,8 +64,11 @@ public class GameManager : MonoBehaviour
     private IEnumerator LoadMenuAndUiAsync(float delayLoadingTime)
     {
         yield return new WaitForSeconds(delayLoadingTime);
+        yield return SceneManager.LoadSceneAsync("Menu");
         yield return SceneManager.LoadSceneAsync("Ui", LoadSceneMode.Additive);
 
+        OnSceneChanged?.Invoke(true);
+        IncreaseScore();
     }
 
     public void ExitGame()

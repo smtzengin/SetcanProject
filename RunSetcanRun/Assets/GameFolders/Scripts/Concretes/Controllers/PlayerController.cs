@@ -3,6 +3,7 @@ using RunSetcanRun.Animations;
 using RunSetcanRun.Combats;
 using RunSetcanRun.Inputs;
 using RunSetcanRun.Movements;
+using RunSetcanRun.Uis;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,7 @@ namespace RunSetcanRun.Controllers
         OnGround _onGround;
         Health _health;
         Damage _damage;
+        DisplayScore _displayScore;
 
         public void Awake()
         {
@@ -33,14 +35,27 @@ namespace RunSetcanRun.Controllers
             _onGround = GetComponent<OnGround>();
             _health = GetComponent<Health>();
             _damage = GetComponent<Damage>();
+            _displayScore = GetComponent<DisplayScore>();
             _input = new PcInput();
  
         }
 
+        private void OnEnable()
+        {
+            GameCanvas gameCanvas = FindObjectOfType<GameCanvas>();
+            if(gameCanvas != null)
+            {
+                _health.OnDead += gameCanvas.ShowGameOverPanel;
+                DisplayHealth displayHealth = gameCanvas.GetComponentInChildren<DisplayHealth>();
+                _health.OnHealthChanged += displayHealth.WriteHealth;
+            }
 
+        }
 
         public void Update()
         {
+            if (_health.IsDead) return;
+
             _horizontal = _input.Horizontal;
             _vertical = _input.Vertical;
             if (_input.isJumpButtonDown && _onGround.IsOnGround)
@@ -70,9 +85,11 @@ namespace RunSetcanRun.Controllers
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.tag == "tag_final_collider")
+            if (collision.gameObject.tag == "tag_final_collider" && GameManager.Instance.score >= 20)
             {
                 GameManager.Instance.LoadScene(1);
+                GameManager.Instance.score = 0;
+                _displayScore.HandleScoreChanged(0);
             }
         }
 

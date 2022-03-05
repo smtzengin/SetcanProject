@@ -11,7 +11,7 @@ namespace RunSetcanRun.Combats
 
         public bool IsDead => currentHealth < 1;
 
-        public event System.Action<int, int> OnHealthChanged;
+        public event System.Action<int,int> OnHealthChanged;
         public event System.Action OnDead;
 
         private void Awake()
