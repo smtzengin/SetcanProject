@@ -89,6 +89,18 @@ namespace RunSetcanRun.Controllers
                 GameManager.Instance.score = 0;
                 _displayScore.HandleScoreChanged(0);
             }
+            if (collision.gameObject.tag == "tag_final_collider2" && GameManager.Instance.score >= 30)
+            {
+                GameManager.Instance.LoadScene(1);
+                GameManager.Instance.score = 0;
+                _displayScore.HandleScoreChanged(0);
+            }
+
+            if (collision.gameObject.tag == "tag_final_collider_finish" && GameManager.Instance.score >= 40)
+            {
+                GameCanvas gameCanvas = FindObjectOfType<GameCanvas>();
+                gameCanvas.ShowGameFinishPanel();
+            }
         }
 
 

@@ -8,6 +8,7 @@ namespace RunSetcanRun.Uis
     {
         [SerializeField] GameObject gamePlayObject;
         [SerializeField] GameOverPanel gameOverPanel;
+        [SerializeField] GameFinishPanel gameFinishPanel;
 
         private void OnEnable()
         {
@@ -29,6 +30,11 @@ namespace RunSetcanRun.Uis
         public void ShowGameOverPanel()
         {
             gameOverPanel.gameObject.SetActive(true);
+        }
+
+        public void ShowGameFinishPanel()
+        {
+            gameFinishPanel.gameObject.SetActive(true);
         }
     }
 }

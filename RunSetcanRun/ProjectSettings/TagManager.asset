@@ -6,6 +6,8 @@ TagManager:
   tags:
   - tag_final_collider
   - Point
+  - tag_final_collider_finish
+  - tag_final_collider2
   layers:
   - Default
   - TransparentFX
