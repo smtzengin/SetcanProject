@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Ui.unity
-    guid: 7ed7b0054f9314347af77bbc2eedf973
-  - enabled: 1
     path: Assets/Scenes/SplashScene.unity
     guid: a1b61af5a7b0af440844bc3a0734a4d2
   - enabled: 1
@@ -23,4 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_03.unity
     guid: 9bb9138a31c29d44da8590c4ab1e461b
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/Ui.unity
+    guid: 7ed7b0054f9314347af77bbc2eedf973
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 04d3064bfcb22ac4d9412aedc49db5d1, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 1d0cd6fe54745b3478855ae994bb96ca, type: 2}
