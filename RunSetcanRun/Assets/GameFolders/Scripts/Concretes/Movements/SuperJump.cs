@@ -59,7 +59,7 @@ public class SuperJump : MonoBehaviour
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
-            //audioSource.PlayOneShot(audioSource.clip, 0.5f);
+            audioSource.PlayOneShot(audioSource.clip, 0.5f);
 
         }
 
